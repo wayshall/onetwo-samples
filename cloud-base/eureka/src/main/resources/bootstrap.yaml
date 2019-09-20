@@ -1,9 +1,11 @@
 spring:
     application:
         name: eureka
+    profiles: 
+        active: eureka-server,eureka-client
     cloud: 
         config: 
-            uri: http://configserver:1400 #instead of serviceId
+            uri: http://localhost:8888 #instead of serviceId
             failFast: true
             name: eureka
             label: master

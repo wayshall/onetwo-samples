@@ -1,14 +1,11 @@
 eureka:
     instance:
-        #healthCheckUrlPath: /service/health
-        metadata-map:
-            management.context-path: ${server.contextPath}
         prefer-ip-address: true
-        leaseRenewalIntervalInSeconds: 2
-        leaseExpirationDurationInSeconds: 3
+        lease-renewal-interval-in-seconds: 2
+        lease-expiration-duration-in-seconds: 3
     client:
-        registerWithEureka: true
-        serviceUrl:
+        register-with-eureka: true
+        service-url: 
             defaultZone:  http://localhost:8761/eureka/
 server: 
     port: 1400
