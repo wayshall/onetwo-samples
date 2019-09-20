@@ -1,0 +1,12 @@
+eureka:
+    instance:
+        leaseRenewalIntervalInSeconds: 2
+        leaseExpirationDurationInSeconds: 3
+    client: 
+        registerWithEureka: true
+        serviceUrl:
+            defaultZone: http://server16:9761/eureka/eureka/
+spring: 
+    cloud: 
+        discovery:
+            enabled: true

@@ -1,0 +1,15 @@
+server:
+    port: 11300
+    tomcat: 
+        remote_ip_header: X-Forwarded-For
+        protocol_header: X-Forwarded-Proto
+        port-header: X-Forwarded-Port
+    use-forward-headers: true
+    contextPath: 
+spring: 
+    application: 
+        name: zipkin-server
+    sleuth: 
+        sampler: 
+            percentage: 1.0
+                

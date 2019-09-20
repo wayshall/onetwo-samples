@@ -1,0 +1,15 @@
+spring:
+    application:
+        name: gateway
+    cloud: 
+        config: 
+            uri: http://configserver:1400 #instead of serviceId
+            failFast: true
+            name: gateway
+            label: master
+            # headers: 
+                # authorization: Bearer eyJhbGciOiJIU
+#        discovery: 
+#            enabled: true
+#            serviceId: CONFIG-SERVER #product id
+            

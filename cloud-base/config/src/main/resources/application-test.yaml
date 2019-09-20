@@ -1,0 +1,44 @@
+eureka:
+    instance:
+        #healthCheckUrlPath: /service/health
+        metadata-map:
+            management.context-path: ${server.contextPath}
+        prefer-ip-address: true
+        leaseRenewalIntervalInSeconds: 2
+        leaseExpirationDurationInSeconds: 3
+    client:
+        registerWithEureka: true
+        serviceUrl:
+            defaultZone:  http://localhost:8761/eureka/
+server: 
+    port: 1400
+logging:
+    level: 
+        org.springframework.cloud: 'DEBUG'
+spring:
+    application: 
+        name: config-server-test
+    cloud:
+        config:
+            server:
+                git: 
+                    uri: git url
+                    searchPaths: '{application}'
+                    force-pull: true
+                    ignoreLocalSshSettings: true
+                    #hostKey: someHostKey
+                    #hostKeyAlgorithm: ssh-rsa
+                    #strictHostKeyChecking: false
+                    deleteUntrackedBranches: true
+                    basedir: /data/app-config-center
+                    privateKey: |
+                                  -----BEGIN RSA PRIVATE KEY-----
+                                  PRIVATE DATA
+                                  -----END RSA PRIVATE KEY-----
+
+
+management: 
+    security: 
+        enabled: false
+#endpoints: 
+    #sensitive: false

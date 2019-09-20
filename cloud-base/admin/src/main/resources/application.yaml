@@ -1,0 +1,7 @@
+server:
+    port: 8999
+spring:
+    profiles:
+        active: #{env}
+    application:
+        name: admin-server

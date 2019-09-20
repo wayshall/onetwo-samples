@@ -1,0 +1,13 @@
+server:
+    port: 1400
+    tomcat: 
+        remote_ip_header: X-Forwarded-For
+        protocol_header: X-Forwarded-Proto
+        port-header: X-Forwarded-Port
+    use-forward-headers: true
+    contextPath: 
+spring: 
+    application: 
+        name: config-server
+#security: 
+#      ignored: /**

@@ -1,0 +1,15 @@
+spring:
+    application:
+        name: eureka
+    cloud: 
+        config: 
+            uri: http://configserver:1400 #instead of serviceId
+            failFast: true
+            name: eureka
+            label: master
+            # headers: 
+                # authorization: Bearer eyJhb....
+        # discovery: 
+            # enabled: true
+            # serviceId: CONFIG-SERVER #product id
+            

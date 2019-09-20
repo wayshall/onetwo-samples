@@ -1,0 +1,15 @@
+eureka:
+    instance:
+        metadata-map: 
+            management.version: 2
+    client:
+        service-url:
+            default-zone:  http://localhost:${server.port}/eureka/
+    dashboard: 
+        enabled: false
+        baseurl: /
+management: 
+    endpoints: 
+        web: 
+            exposure: 
+                include: '*'
