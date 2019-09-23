@@ -5,7 +5,8 @@ server:
         protocol_header: X-Forwarded-Proto
         port-header: X-Forwarded-Port
     use-forward-headers: true
-    contextPath: 
+    servlet: 
+        context-path: /
 spring: 
     application: 
         name: config-server
